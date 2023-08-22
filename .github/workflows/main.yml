@@ -1,4 +1,5 @@
 name: My Workflow
+
 on:
   push:
     branches:
@@ -13,9 +14,11 @@ jobs:
     runs-on: ubuntu-lastest
 
     steps:
-      - name: 'Testing github action'
-        run: pwd
+      - name: 'Before'
+        run: ls
+
+      - uses: actions/checkout@v3 
 
 
-      - name: 'Testing printing'
-        run: echo eyad
+      - name: 'After'
+        run: ls
